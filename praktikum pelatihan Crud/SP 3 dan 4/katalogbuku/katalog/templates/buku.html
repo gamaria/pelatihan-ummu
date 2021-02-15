@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block konten%}
+
+<!--arena html-->
+<div class="container-fluid">
+
+<h1>Buku</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat minus, rem iste ut quis voluptate nemo impedit ad animi incidunt dolor odio excepturi cupiditate molestiae asperiores aspernatur odit? Cumque, aut!</p>
+<div class="card">
+        <table class="table table-hover">
+                <tr>
+                    <td>id</td>
+                    <td>Kode Buku</td>
+                    <td>Jenis Buku id</td>
+                    <td>Jenis Buku</td>
+                    <td>judulbuku</td>
+                    <td>penulis</td>
+                    <td>penerbit</td>
+                    <td>Thn terbit</td>
+                    <td>status</td>
+                    <td>gambar</td>
+                    <td>Proses</td>
+                </tr>
+                <!--baris ke 2-->
+                {% for data in dbuku %}
+                <tr>
+                    <td>{{data.id}}</td>
+                    <td>{{data.kodebuku}}</td>
+                    <td>{{data.jenisbuku_id}}</td>
+                    <td>{{data.books.jenisbuku}}</td>
+                    <td>{{data.judulbuku}}</td>
+                    <td>{{data.penulis}}</td>
+                    <td>{{data.penerbit}}</td>
+                    <td>{{data.thnterbit}}</td>
+                    <td>{{data.status}}</td>
+                    <td>{{data.gambar}}
+                        <img src="{{url_for('static', filename='gambar/' + data.gambar)}}" alt="..." width="100px">
+                    </td>
+                    <td><a class="btn btn-success" href="">Edit</a> 
+                        <a class="btn btn-danger" href="">Hapus</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+</div>
+
+</div>
+
+
+
+
+
+
+{% endblock%}

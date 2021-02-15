@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block konten%}
+
+<!--arena html-->
+<div class="container-fluid">
+
+<h1>Jenis Buku</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat minus, rem iste ut quis voluptate nemo impedit ad animi incidunt dolor odio excepturi cupiditate molestiae asperiores aspernatur odit? Cumque, aut!</p>
+<div class="card">
+        <table class="table table-hover">
+                <tr>
+                    <td>id</td>
+                    <td>Jenis Buku</td>
+                    <td>keterangan</td>
+                    <td>Proses</td>
+                </tr>
+                <!--baris ke 2-->
+                {% for data in djenisbuku %}
+                <tr>
+                    <td>{{data.id}}</td>
+                    <td>{{data.jenisbuku}}</td>
+                    <td>{{data.keterangan}}</td>
+                    <td><a class="btn btn-success" href="">Edit</a> 
+                        <a class="btn btn-danger" href="">Hapus</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+</div>
+
+</div>
+
+
+
+
+
+
+{% endblock%}

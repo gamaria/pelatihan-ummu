@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block konten%}
+
+<!--arena html-->
+<div class="container-fluid">
+
+<h1>Buku</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat minus, rem iste ut quis voluptate nemo impedit ad animi incidunt dolor odio excepturi cupiditate molestiae asperiores aspernatur odit? Cumque, aut!</p>
+
+<!--form jenis buku-->
+<div class="jumbotron col-7">
+    
+<form method="POST" enctype="multipart/form-data">
+    {{form.hidden_tag()}}
+<div class="form-group">
+    {{form.kodebuku.label(class="form-control-label")}}
+    {% if form.kodebuku.errors %}
+         {{form.kodebuku(class="form-control is-invalid")}}
+
+         <div class="invalid-feedback">
+             {%for error in form.kodebuku.errors %}
+             <span>{{error}}</span>
+             {% endfor %}
+         </div>
+    {%else%}
+        {{form.kodebuku(class="form-control")}}
+    
+    {%endif%}
+</div>
+
+<div class="form-group">
+    {{form.jenisbuku.label(class="form-control-label")}}
+    {% if form.jenisbuku.errors %}
+         {{form.jenisbuku(class="form-control is-invalid")}}
+
+         <div class="invalid-feedback">
+             {%for error in form.jenisbuku.errors %}
+             <span>{{error}}</span>
+             {% endfor %}
+         </div>
+    {%else%}
+        {{form.jenisbuku(class="form-control")}}
+    
+    {%endif%}
+</div>
+
+<div class="form-group">
+    {{form.judulbuku.label(class="form-control-label")}}
+    {% if form.judulbuku.errors %}
+         {{form.judulbuku(class="form-control is-invalid")}}
+
+         <div class="invalid-feedback">
+             {%for error in form.judulbuku.errors %}
+             <span>{{error}}</span>
+             {% endfor %}
+         </div>
+    {%else%}
+        {{form.judulbuku(class="form-control")}}
+    
+    {%endif%}
+</div>
+
+<div class="form-group">
+    {{form.penulis.label(class="form-control-label")}}
+    {% if form.penulis.errors %}
+         {{form.penulis(class="form-control is-invalid")}}
+
+         <div class="invalid-feedback">
+             {%for error in form.penulis.errors %}
+             <span>{{error}}</span>
+             {% endfor %}
+         </div>
+    {%else%}
+        {{form.penulis(class="form-control")}}
+    
+    {%endif%}
+</div>
+
+<div class="form-group">
+    {{form.penerbit.label(class="form-control-label")}}
+    {% if form.penerbit.errors %}
+         {{form.penerbit(class="form-control is-invalid")}}
+
+         <div class="invalid-feedback">
+             {%for error in form.penerbit.errors %}
+             <span>{{error}}</span>
+             {% endfor %}
+         </div>
+    {%else%}
+        {{form.penerbit(class="form-control")}}
+    
+    {%endif%}
+</div>
+
+<div class="form-group">
+    {{form.thnterbit.label(class="form-control-label")}}
+    {% if form.thnterbit.errors %}
+         {{form.thnterbit(class="form-control is-invalid")}}
+
+         <div class="invalid-feedback">
+             {%for error in form.thnterbit.errors %}
+             <span>{{error}}</span>
+             {% endfor %}
+         </div>
+    {%else%}
+        {{form.thnterbit(class="form-control")}}
+    
+    {%endif%}
+</div>
+
+<div class="form-group">
+    {{form.status.label(class="form-control-label")}}
+    {% if form.status.errors %}
+         {{form.status(class="form-control is-invalid")}}
+
+         <div class="invalid-feedback">
+             {%for error in form.status.errors %}
+             <span>{{error}}</span>
+             {% endfor %}
+         </div>
+    {%else%}
+        {{form.status(class="form-control")}}
+    
+    {%endif%}
+</div>
+
+<div class="form-group">
+    {{form.gambar.label(class="form-control-label")}}
+    {% if form.gambar.errors %}
+         {{form.gambar(class="form-control is-invalid")}}
+
+         <div class="invalid-feedback">
+             {%for error in form.gambar.errors %}
+             <span>{{error}}</span>
+             {% endfor %}
+         </div>
+    {%else%}
+        {{form.gambar(class="form-control")}}
+    
+    {%endif%}
+</div>
+
+
+
+<div class="form-group">
+    {{form.submit(class="btn btn-primary")}}
+</div>
+
+</form>
+</div>
+
+
+</div>
+
+
+
+
+
+
+{% endblock%}
